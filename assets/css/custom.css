@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* SETTING COLOR PALETTE TO BE USED */
+
+:root {
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(0, 0%, 0%);
+
+    --gray-color: hsl(0, 0%, 80%);
+    --gray-dark-color: hsl(0, 0%, 50%);
+
+    --green-color: hsl(136, 37%, 66%);
+    --green-light-color: hsl(114, 58%, 77%);
+    --green-dark-color: hsl(147, 41%, 32%);
+
+    --pink-color: hsl(335, 66%, 64%);
+    --pink-light-color: hsl(337, 86%, 81%);
+    --pink-dark-color: hsl(334, 53%, 51%);
+}
+
+*,
+body {
+    scroll-behavior: smooth;
+    font-family: 'Playpen Sans', cursive;
+}
+
+/* SETTING STYLE TO SCROLL BAR */
+
+::-webkit-scrollbar {
+    width: .60rem;
+    background-color: var(--pink-light-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--pink-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--pink-dark-color);
+}
+
+/* CUSTOM TITLE */
+
+[data-title] {
+    position: relative;
+}
+
+[data-title]:hover::before {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -20px;
+    left: 270px;
+    display: inline-block;
+    padding: 3px 6px;
+    border-radius: 2px;
+    background: none;
+    color: var(--pink-dark-color);
+    font-weight: bold;
+    font-size: 14px;
+    font-family: sans-serif;
+    white-space: nowrap;
+}
+
+[data-title]:hover::after {
+    position: absolute;
+    bottom: -10px;
+    left: 8px;
+    display: inline-block;
+    color: #fff;
+    border: 8px solid transparent;
+}
+
+/* OTHER SETTINGS */
+
+.main {
+    transition: transform .15s ease-in;
+}
+
+.main:hover {
+    transform: scale(1.05);
+}
+
+
+.main-box {
+    transition: transform .15s ease-in;
+}
+
+.main-box:hover {
+    transform: scale(1.025);
+}
+
+.img-main {
+    width: 250px;
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    margin: auto;
+}
+
+.img-we {
+    background-image: url('../images/we.png');
+}
+
+.name-us {
+    display: flex;
+    justify-content: space-between;
+}

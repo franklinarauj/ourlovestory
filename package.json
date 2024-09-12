@@ -1,0 +1,23 @@
+{
+  "name": "our-love-story",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franklinarauj/ourlovestory.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franklinarauj/ourlovestory/issues"
+  },
+  "homepage": "./",
+  "devDependencies": {
+    "tailwindcss": "^3.4.11"
+  }
+}
