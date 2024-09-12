@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproduzir Áudios Diferentes</title>
+    <style>
+        .audio-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .audio-box {
+            margin-bottom: 20px;
+        }
+
+        .audio-span {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .audio-span:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="audio-container">
+    <!-- Primeiro span com áudio 1 -->
+    <div class="audio-box">
+        <span class="audio-span" id="audio-span-1">Passe o mouse ou clique aqui (Áudio 1)</span>
+    </div>
+
+    <!-- Segundo span com áudio 2 -->
+    <div class="audio-box">
+        <span class="audio-span" id="audio-span-2">Passe o mouse ou clique aqui (Áudio 2)</span>
+    </div>
+</div>
+
+<!-- Elementos de áudio -->
+<audio id="audio1" src="assets/audio/flamengo.mp3"></audio>
+<audio id="audio2" src="assets/audio/vasco-da-gama-estourado.mp3"></audio>
+
+<script>
+    // Função para tocar áudio 1
+    function playAudio1() {
+        const audio1 = document.getElementById('audio1');
+        audio1.currentTime = 0;
+        audio1.play();
+    }
+
+    // Função para tocar áudio 2
+    function playAudio2() {
+        const audio2 = document.getElementById('audio2');
+        audio2.currentTime = 0;
+        audio2.play();
+    }
+
+    // Adicionando eventos para o primeiro span (Áudio 1)
+    const audioSpan1 = document.getElementById('audio-span-1');
+    audioSpan1.addEventListener('click', playAudio1);
+    audioSpan1.addEventListener('mouseover', playAudio1);
+
+    // Adicionando eventos para o segundo span (Áudio 2)
+    const audioSpan2 = document.getElementById('audio-span-2');
+    audioSpan2.addEventListener('click', playAudio2);
+    audioSpan2.addEventListener('mouseover', playAudio2);
+</script>
+
+</body>
+</html>

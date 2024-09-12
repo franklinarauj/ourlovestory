@@ -14,7 +14,7 @@ function calcularDiferencaCompleta(data) {
     let minutos = agora.getMinutes() - dataImportante.getMinutes();
     let segundos = agora.getSeconds() - dataImportante.getSeconds();
 
-    // Ajusta os valores negativos
+    // TRATAMENTO PARA OS VALORES NEGATIVOS
     if (segundos < 0) {
         segundos += 60;
         minutos--;
@@ -56,3 +56,52 @@ document.addEventListener("DOMContentLoaded", function() {
     atualizarDatas(); 
     setInterval(atualizarDatas, 1000);
 });
+
+// SELECIONA CADA DIV E REALIZA FUNÇÃO PARA REPRODUZIR O ÁUDIO
+function playAudioVasco() {
+    const audioVasco = document.getElementById('audioVasco');
+    audioVasco.currentTime = 0;
+    audioVasco.play();
+}
+
+function playAudioFlamengo() {
+    const audioFlamengo = document.getElementById('audioFlamengo');
+    audioFlamengo.currentTime = 0;
+    audioFlamengo.play();
+}
+
+function playAudioMeuAmor() {
+    const audioGrilo = document.getElementById('audioGrilo');
+    audioGrilo.currentTime = 0;
+    audioGrilo.play();
+}
+
+function playAudioIris() {
+    const audioIris = document.getElementById('audioIris');
+    audioIris.currentTime = 0;
+    audioIris.play();
+}
+
+function playAudioEqualize() {
+    const audioEqualize = document.getElementById('audioEqualize');
+    audioEqualize.currentTime = 0;
+    audioEqualize.play();
+}
+
+// ADICIONA O EVENTO DE CLIQUE E MOUSEOVER A CADA DIV
+const audioDivVas = document.getElementById('audio-vasco');
+audioDivVas.addEventListener('click', playAudioVasco);
+audioDivVas.addEventListener('mouseover', playAudioVasco);
+
+const audioDivFla = document.getElementById('audio-flamengo');
+audioDivFla.addEventListener('click', playAudioFlamengo);
+audioDivFla.addEventListener('mouseover', playAudioFlamengo);
+
+const audioDivGrilo = document.getElementById('audio-meuAmor');
+audioDivGrilo.addEventListener('click', playAudioMeuAmor);
+
+const audioDivIris = document.getElementById('audio-iris');
+audioDivIris.addEventListener('click', playAudioIris);
+
+const audioDivEqualize = document.getElementById('audio-equalize');
+audioDivEqualize.addEventListener('click', playAudioEqualize);
